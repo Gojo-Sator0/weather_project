@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз погоды</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h2>Прогноз погоды</h2>
+
+    <!-- Форма для ввода города -->
+    <form method="get">
+        <label for="city">Введите город: </label>
+        <input type="text" id="city" name="city" value="{{ city }}">
+        <button type="submit">Получить погоду</button>
+    </form>
+
+    {% if data %}
+        <div class="weather-info">
+            <h3>Погода {{ city }}</h3>
+            <p>Температура: {{ temp }} °C</p>
+            <p>Влажность: {{ humidity }} %</p>
+            <p>Давление: {{ pressure }} hPa</p>
+            <img src="data:image/png;base64,{{ temp_chart }}" alt="График температуры">
+        </div>
+    {% else %}
+        <p class="error-message">Информация о погоде недоступна для выбранного города.</p>
+    {% endif %}
+</body>
+</html>

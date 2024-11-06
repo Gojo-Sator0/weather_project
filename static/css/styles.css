@@ -1,0 +1,156 @@
+/* Основной стиль страницы */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #240046; /* Тёмный фиолетовый */
+    color: #fff; /* Белый текст */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Заголовок */
+h2 {
+    text-align: center;
+    color: #ff6d00; /* Оранжевый */
+    margin-top: 30px;
+    font-size: 2.5em;
+}
+
+/* Форма для ввода города */
+form {
+    text-align: center;
+    margin-top: 30px;
+    background-color: #ff7900; /* Ярко-оранжевый */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px; /* Устанавливаем максимальную ширину формы */
+    margin: 0 auto; /* Центрируем форму по горизонтали */
+    box-sizing: border-box;
+}
+
+/* Поле для ввода города */
+input[type="text"] {
+    padding: 12px;
+    font-size: 16px;
+    width: 100%; /* Заполняет всю ширину родительского контейнера */
+    max-width: 300px; /* Ограничиваем максимальную ширину */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+/* Кнопка */
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    background-color: #7B2CBF; /* Тёмно-фиолетовый */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px; /* Ограничиваем ширину кнопки */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+button:hover {
+    background-color: #ff9100; /* Оранжевый при наведении */
+}
+
+/* Стиль для отображения данных погоды */
+.weather-info {
+    text-align: center;
+    margin-top: 40px;
+    background-color: #ff9e00; /* Золотисто-оранжевый */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.weather-info h3 {
+    color: #3c096c; /* Тёмно-фиолетовый */
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.weather-info p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #5a189a; /* Ярко-фиолетовый */
+}
+
+/* Изображение с температурой */
+.weather-info img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    max-width: 100%;
+    max-height: 400px;
+}
+
+/* Ошибка при отсутствии данных о погоде */
+.error-message {
+    text-align: center;
+    font-size: 18px;
+    color: #7b2cbf; /* Фиолетовый */
+    margin-top: 20px;
+}
+
+/* Анимация загрузки */
+.loading {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.loading:before {
+    content: "⏳";
+    margin-right: 10px;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    /* Уменьшаем размеры для мобильных устройств */
+    h2 {
+        font-size: 2em;
+    }
+
+    .weather-info h3 {
+        font-size: 1.4em;
+    }
+
+    .weather-info p {
+        font-size: 16px;
+    }
+
+    .weather-info {
+        margin-top: 30px;
+        padding: 15px;
+    }
+
+    input[type="text"], button {
+        width: 80%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    /* Уменьшаем размеры шрифта на маленьких экранах */
+    .loading {
+        font-size: 1em;
+    }
+}
