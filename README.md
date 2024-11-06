@@ -42,10 +42,6 @@ Technologies Used:
     OpenWeather API: For fetching weather data.
     Matplotlib: For creating the temperature chart.
 
-Screenshots:
-
-![image](https://github.com/user-attachments/assets/5d2f19b5-d9c2-40dc-8d91-2f1ae3c2b1c2)
-
 License
 This project is licensed under the MIT License.
 
