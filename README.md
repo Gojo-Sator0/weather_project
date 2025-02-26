@@ -17,7 +17,7 @@ Requirements:
 Installation:
 
 1.Clone the repository:
-    git clone https://github.com/your-username/weather-app.git
+    git clone https://github.com/Gojo-Sator0/weather_project.git
     cd weather-app
 2.Create and activate a virtual environment:
     python -m venv venv
